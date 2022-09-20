@@ -1,0 +1,85 @@
+:root{
+    --font:'Poppins', sans-serif;
+    --primary_color:rgb(62, 64, 197);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url(./assets/background_img.jpg);
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.head h2{
+    font-family: var(--font);
+    font-size: 1.4rem;
+    margin-top: 2em;
+    margin-left: 0.6em;
+    margin-bottom: 0.6em;
+}
+
+.head img{
+    width: 16em;
+}
+
+.head p{
+    font-family: var(--font);
+    font-size: 1.6rem;
+    text-decoration: underline;
+    text-decoration-color: var(--primary_color);
+    margin-left: 0.6em;
+    margin-top: 0.3em;
+}
+
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-field input{
+    width: 18em;
+    height: 2em;
+    margin: 1em;
+}
+
+
+#login-email{
+    font-family: var(--font);
+}
+
+#loginButton{
+    width: 6em;
+    height: 2.5em;
+    font-family:'Poppins', sans-serif;
+    color: aliceblue;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color:var(--primary_color);
+    margin-top: 1.8em;
+    margin-left: 1em;
+}
+
+#loginButton:hover{  
+    background-color: green;
+    color: white;
+}
+
+

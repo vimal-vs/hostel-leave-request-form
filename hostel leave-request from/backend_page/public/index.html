@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="assets/srm_favicon.ico">
+  <title>Sign In</title>
+</head>
+
+<body>
+
+<div class="container">
+  <form id="login-form" action="#">
+
+    <div class="head">
+      <a href="./index.html">
+        <img src="./assets/srm_logo.png" alt="srm_logo">
+      </a>
+      <p>SRM Hostel Leave Requests</p>  
+      <p>Admin Control</p>
+      <h2>User Login</h2>
+    </div>
+
+    <div class="input-field">
+
+      <input placeholder="Enter Email Address" id="login-email" type="email" class="validate">
+      <input placeholder="Enter Password" id="login-password" type="password" class="validate" autocomplete="off">
+
+      <button type="submit" id="loginButton">Login</button>
+  
+  </form>
+</div>
+
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>

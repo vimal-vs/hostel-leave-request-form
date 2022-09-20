@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/srm_favicon.ico">
+    <title>SRM Hostel Leave Request Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<body>
+    <form id="leave_form" autocomplete="off" method="post">
+        <div class="header">
+            <a href="./index.html">
+                <img class="srm_logo" src="./assets/srm_logo.png" alt="srm_logo">
+            </a>
+            <p class="p">Hostel Leave Request Form</p>
+        </div>
+
+        <div class="header_form_info">
+            <p class="form_info_p">Student Details</p>
+            <input type="text" title="Student Name" placeholder="Student Name" required id="studentName" minlength="4">
+            <input type="text" title="Register Number" placeholder="Student register number" required id="registrationNumber">
+            <input type="text" title="Enter a valid mobile mumber" placeholder="Student phone number" required id="studentPhone" pattern="[0-9]{10,10}">
+            <input type="text" title="Enter a valid mobile mumber" placeholder="Parent phone number" required id="parentPhone" pattern="[0-9]{10,10}">
+
+            <select class="form_info_select_faculty" id="faculty" required>
+                <option selected hidden value="">Faculty of</option>
+                <option value="E&T">E&T</option>
+                <option value="S&H" disabled>S&H</option>
+                <option value="BPT" disabled>BPT</option>
+                <option value="BOT" disabled>BOT</option>
+            </select>
+            <select class="form_info_select_course" id="course" required>
+                <option selected hidden value="">Course</option>
+                <option value="CSE">CSE</option>
+                <option value="CSE-AIML">CSE AIML</option>
+                <option value="ECE">ECE</option>
+            </select>
+            <select class="form_info_select_year" id="year" required>
+                <option selected hidden value="">Year</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <select class="form_info_select_semester" id="semester" required>
+                <option selected hidden value="">Semester</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+            <div class="form_info_date">
+                <h2>From Date</h2>
+                <input type="date" title="From Date" id="fromDate" required>
+                <h2>To Date</h2>
+                <input type="date" title="To Date" id="toDate" required>
+            </div>
+            <input class="form_info-hostel" type="text" title="Hostel Name" placeholder="Hostel Name" required id="hostelName" minlength="2">
+            <input class="form_info-room" type="text" title="Room number" placeholder="Hostel Room number" required id="roomNumber">
+            <input class="form_info-reason" type="text" title="Reason for leave request" placeholder="Reason for leave" required id="reason" minlength="2">
+            <input class="form_info-place" type="text" title="Place to visit" placeholder="Place to visit " required id="place" minlength="2">
+            <input class="form_info-address" type="text" title="Address for Communication" placeholder="Address for Communication" required id="address" minlength="2">
+            <input type="email" name="email" title="Email for confirmation" placeholder="Enter e-mail" required id="email" pattern="[a-zA-Z0-9@.]{2,}">
+
+        </div>
+
+        <div class="confirm_checkbox">
+            <input type="checkbox" title="confirmation" required> I confirm that the given details are correct and are filled by myself.
+        </div>
+
+        <div class="buttons">
+            <div class="submit_button">
+                <button type="submit" value="Submit">Submit</button>
+            </div>
+            <div class="reset_button">
+                <button id="resetButton" type="reset">Reset</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>VS Copyright © 2022</p>
+        </div>
+    </form>
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+</html>
