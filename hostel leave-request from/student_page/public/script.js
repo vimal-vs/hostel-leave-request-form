@@ -1,11 +1,5 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAzWc74eM8G7yOXpfwzB-pnIJZEq2i_TEg",
-    authDomain: "hostelleaverequestform-a9fd4.firebaseapp.com",
-    databaseURL: "https://hostelleaverequestform-a9fd4-default-rtdb.firebaseio.com",
-    projectId: "hostelleaverequestform-a9fd4",
-    storageBucket: "hostelleaverequestform-a9fd4.appspot.com",
-    messagingSenderId: "905877805852",
-    appId: "1:905877805852:web:3db48c86e49749bece38d9"
+    //firebase config
   };
 
 firebase.initializeApp(firebaseConfig);
@@ -95,12 +89,12 @@ document.getElementById("toDate").setAttribute("min",minDate);
 function sendMail(){
     Email.send({
         Host : "smtp.elasticemail.com",
-        Username : "passgen.pybot@gmail.com",
-        Password : "5F2A4A21A5273FE9A98F4626313BECF4E21D",
+        Username : "",
+        Password : "",
         To : document.getElementById("email").value,
-        From : "passgen.pybot@gmail.com",
+        From : "",
         Subject : "Leave form request confirmation",
-        Body : "<html><br></br><strong>Dear Student,</strong><br></br><br></br><strong>Your request has been submitted.</strong><br></br><strong>Kindly wait for approval mail.</strong><br></br><br></br><br></br><strong>Thanks & Regards,<br></br>SRM Hostels.<br></br><br></br></strong></html>",
+        Body : "<html><br></br><strong>Dear Student,</strong><br></br><br></br><strong>Your request has been submitted.</strong><br></br><strong>Kindly wait for approval mail.</strong><br></br><br></br><br></br><strong>Thanks & Regards,<br></br>SRM.<br></br><br></br></strong></html>",
     }).then(
     alert('Confirmation is sent to your email!\n(Kindly check spam if not in inbox.)')
     );
