@@ -1,11 +1,5 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAzWc74eM8G7yOXpfwzB-pnIJZEq2i_TEg",
-    authDomain: "hostelleaverequestform-a9fd4.firebaseapp.com",
-    databaseURL: "https://hostelleaverequestform-a9fd4-default-rtdb.firebaseio.com",
-    projectId: "hostelleaverequestform-a9fd4",
-    storageBucket: "hostelleaverequestform-a9fd4.appspot.com",
-    messagingSenderId: "905877805852",
-    appId: "1:905877805852:web:3db48c86e49749bece38d9"
+    //firebase config
   };
 
 firebase.initializeApp(firebaseConfig);
@@ -162,10 +156,10 @@ function deleteRecord(){
 function approvedMail(){
    Email.send({
        Host : "smtp.elasticemail.com",
-       Username : "passgen.pybot@gmail.com",
-       Password : "5F2A4A21A5273FE9A98F4626313BECF4E21D",
+       Username : "",
+       Password : "",
        To : Modemail.value,
-       From : "passgen.pybot@gmail.com",
+       From : "",
        Subject : "Leave form request Approval",
        Body : approvedMailBody,
    }).then(
@@ -177,10 +171,10 @@ function approvedMail(){
 function rejectedMail(){
    Email.send({
        Host : "smtp.elasticemail.com",
-       Username : "passgen.pybot@gmail.com",
-       Password : "5F2A4A21A5273FE9A98F4626313BECF4E21D",
+       Username : "",
+       Password : "",
        To : Modemail.value,
-       From : "passgen.pybot@gmail.com",
+       From : "",
        Subject : "Leave form request Approval",
        Body : rejectedMailBody,
    }).then(
